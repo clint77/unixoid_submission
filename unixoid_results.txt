@@ -1,0 +1,29 @@
+.............F.F.
+
+Failures:
+
+  1) Unixoid test 12b. should have the count of text files in my/public/files/text-files-count.txt
+     Failure/Error: expect(File.read('my/public/files/text-files-count.txt')).to match(/^\s*\d{2,6}\s*$/)
+       expected "Number of text files in my home directory:  16\n" to match /^\s*\d{2,6}\s*$/
+       Diff:
+       @@ -1,2 +1,2 @@
+       -/^\s*\d{2,6}\s*$/
+       +Number of text files in my home directory:  16
+     # ./unixoid_spec.rb:68:in `block (2 levels) in <top (required)>'
+
+  2) Unixoid test 13b. should have the the first three env vars in my/private/files/first-three-env.txt
+     Failure/Error: expect(lines.count).to eq(3)
+       
+       expected: 3
+            got: 1
+       
+       (compared using ==)
+     # ./unixoid_spec.rb:78:in `block (2 levels) in <top (required)>'
+
+Finished in 0.01001 seconds (files took 0.13204 seconds to load)
+17 examples, 2 failures
+
+Failed examples:
+
+rspec ./unixoid_spec.rb:67 # Unixoid test 12b. should have the count of text files in my/public/files/text-files-count.txt
+rspec ./unixoid_spec.rb:75 # Unixoid test 13b. should have the the first three env vars in my/private/files/first-three-env.txt
